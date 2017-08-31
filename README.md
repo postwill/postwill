@@ -32,7 +32,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/kirillweb/social_posting.
+Bug reports and pull requests are welcome on GitHub at https://github.com/kirillshevch/social_posting.
 
 ## License
 
