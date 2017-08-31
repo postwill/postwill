@@ -1,4 +1,4 @@
-require "social_posting/version"
+require 'social_posting/version'
 
 module SocialPosting
   # Your code goes here...

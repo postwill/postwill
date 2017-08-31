@@ -22,7 +22,23 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+social_posting = SocialPosting.new
+social_posting.to(:twitter, 'text', 'image_url')
+social_posting.to([:twitter, :facebook], 'text', 'image_url')
+
+social_posting.status
+{twitter: 'ok', facebook: 'ok'}
+
+social_posting.errors
+
+```ruby
+SocialPosting::Settings.configure do |config|
+  config.provider.twitter = {
+    consumer_key: "YOUR_CONSUMER_KEY"
+  }
+end
+```
 
 ## Development
 
