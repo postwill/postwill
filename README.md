@@ -1,8 +1,6 @@
 # SocialPosting
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/social_posting`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Posting to the most popular social media
 
 ## Installation
 
@@ -22,33 +20,104 @@ Or install it yourself as:
 
 ## Usage
 
+List of available providers is [here](https://github.com/postwill/social_posting/blob/master/PROVIDERS.md).
+
+### Single provider
+
 ```ruby
-social_posting = SocialPosting.new
-social_posting.to(:twitter, 'text', 'image_url')
-social_posting.to([:twitter, :facebook], 'text', 'image_url')
+social_posting = SocialPosting::Client.new(
+                   twitter: {
+                     access_token: 'access_token',
+                     access_token_secret: 'access_token_secret'
+                   }
+                 )
 
-social_posting.status
-{twitter: 'ok', facebook: 'ok'}
+social_posting.to(:twitter, 'text', 'image')
+```
 
-social_posting.errors
+Success:
+```ruby
+[
+  {
+    twitter: {
+      status: :ok,
+      response: {} # Hash of response data depends on provider
+    }
+  }
+]
+```
 
+Failure:
+```ruby
+[
+  {
+    twitter: {
+      status: :error,
+      response: '' # String error message
+    }
+  }
+]
+```
+
+Application credentials
+
+`config/initializers/social_posting.rb`
 ```ruby
 SocialPosting::Settings.configure do |config|
-  config.provider.twitter = {
-    consumer_key: "YOUR_CONSUMER_KEY"
+  config.providers.twitter = {
+    consumer_key: 'your_consumer_key',
+    consumer_secret: 'your_consumer_secret'
   }
 end
 ```
 
-## Development
+### Multiple providers
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+```ruby
+social_posting = SocialPosting::Client.new(
+                   twitter: {
+                     access_token: 'access_token',
+                     access_token_secret: 'access_token_secret'
+                   },
+                   facebook: {
+                     access_token: 'access_token'
+                   }
+                 )
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+social_posting.to(%w[twitter facebook], 'text', 'image')
+```
+
+Result:
+```ruby
+[
+  {
+    twitter: {
+      status: :ok,
+      response: {}
+    },
+    facebook: {
+      status: :ok,
+      response: {}
+    }
+  }
+]
+```
+
+Application credentials(for providers which need them)
+
+`config/initializers/social_posting.rb`
+```ruby
+SocialPosting::Settings.configure do |config|
+  config.providers.twitter = {
+    consumer_key: 'your_consumer_key',
+    consumer_secret: 'your_consumer_secret'
+  }
+end
+```
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/kirillshevch/social_posting.
+Bug reports and pull requests are welcome on GitHub at https://github.com/postwill/social_posting.
 
 ## License
 
