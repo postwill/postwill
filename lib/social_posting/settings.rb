@@ -4,7 +4,6 @@ module SocialPosting
 
     setting :providers do
       setting :twitter, {}
-      setting :facebook, {}
     end
   end
 end

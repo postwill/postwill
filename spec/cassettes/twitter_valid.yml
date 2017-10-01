@@ -1,0 +1,133 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.twitter.com/1.1/statuses/update.json
+    body:
+      encoding: UTF-8
+      string: status=test+api+explorer
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/6.1.0
+      Authorization:
+      - OAuth oauth_consumer_key="ewGsRWuTXcSe1LLrHvNIWSLBv", oauth_nonce="40c873102bb5fbf8775fb30ef4a6c1ce",
+        oauth_signature="puCcEUoe0wzxPtD906XsY%2B783LE%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1506863005", oauth_token="861587537458073601-iusWEhwUBxIBZ5D9N2zAtYpoODisj1j",
+        oauth_version="1.0"
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      Content-Disposition:
+      - attachment; filename=json.json
+      Content-Length:
+      - '905'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Sun, 01 Oct 2017 13:03:32 GMT
+      Expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      Last-Modified:
+      - Sun, 01 Oct 2017 13:03:32 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - tsa_o
+      Set-Cookie:
+      - guest_id=v1%3A150686301183071737; Expires=Tue, 01 Oct 2019 13:03:32 UTC; Path=/;
+        Domain=.twitter.com
+      - lang=ru; Path=/
+      - personalization_id="v1_eEkpxPHdmgaR6Fv3Kbnaxg=="; Expires=Tue, 01 Oct 2019
+        13:03:32 UTC; Path=/; Domain=.twitter.com
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Access-Level:
+      - read-write
+      X-Connection-Hash:
+      - 4e17d23a30d79871488ab3439f452d51
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Response-Time:
+      - '297'
+      X-Transaction:
+      - '0002941a0087f014'
+      X-Tsa-Request-Body-Time:
+      - '0'
+      X-Twitter-Response-Tags:
+      - BouncerCompliant
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: ASCII-8BIT
+      string: '{"created_at":"Sun Oct 01 13:03:31 +0000 2017","id":914475868583587840,"id_str":"914475868583587840","text":"test
+        api explorer","truncated":false,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[]},"source":"\u003ca
+        href=\"https:\/\/cryptostat.us\" rel=\"nofollow\"\u003eCryptostatus Posting\u003c\/a\u003e","in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":861587537458073601,"id_str":"861587537458073601","name":"Cryptostatus","screen_name":"cryptostatus","location":"","description":"Easy
+        monitoring of your cryptocurrencies portfolio growth.","url":"https:\/\/t.co\/xfYnXOPyDE","entities":{"url":{"urls":[{"url":"https:\/\/t.co\/xfYnXOPyDE","expanded_url":"http:\/\/cryptostat.us","display_url":"cryptostat.us","indices":[0,23]}]},"description":{"urls":[]}},"protected":false,"followers_count":8,"friends_count":0,"listed_count":0,"created_at":"Mon
+        May 08 14:24:11 +0000 2017","favourites_count":1,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":31,"lang":"ru","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"F5F8FA","profile_background_image_url":null,"profile_background_image_url_https":null,"profile_background_tile":false,"profile_image_url":"http:\/\/pbs.twimg.com\/profile_images\/893721819739508738\/GNLYNNGL_normal.jpg","profile_image_url_https":"https:\/\/pbs.twimg.com\/profile_images\/893721819739508738\/GNLYNNGL_normal.jpg","profile_banner_url":"https:\/\/pbs.twimg.com\/profile_banners\/861587537458073601\/1503226359","profile_link_color":"1DA1F2","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":false,"following":false,"follow_request_sent":false,"notifications":false,"translator_type":"none"},"geo":null,"coordinates":null,"place":null,"contributors":null,"is_quote_status":false,"retweet_count":0,"favorite_count":0,"favorited":false,"retweeted":false,"lang":"fr"}'
+    http_version: 
+  recorded_at: Sun, 01 Oct 2017 13:03:32 GMT
+- request:
+    method: post
+    uri: https://api.twitter.com/1.1/statuses/update.json
+    body:
+      encoding: UTF-8
+      string: status=test+api+explorer
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/6.1.0
+      Authorization:
+      - OAuth oauth_consumer_key="FADK880210MGTVCW87", oauth_nonce="3c327aa5ac2f1b91d120c470112b3028",
+        oauth_signature="KYCVPcNvWY9631o3HHyIvH2X8iM%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1506863510", oauth_token="ZIHA791012HTLVRMQ4", oauth_version="1.0"
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 401
+      message: Authorization Required
+    headers:
+      Content-Length:
+      - '87'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 01 Oct 2017 13:11:51 GMT
+      Server:
+      - tsa_o
+      Set-Cookie:
+      - guest_id=v1%3A150686351171000335; Expires=Tue, 01 Oct 2019 13:11:51 UTC; Path=/;
+        Domain=.twitter.com
+      - personalization_id="v1_bYB9Lobx+/y1isVewGvRdQ=="; Expires=Tue, 01 Oct 2019
+        13:11:51 UTC; Path=/; Domain=.twitter.com
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Connection-Hash:
+      - 3bce0c99274a94e23e42827a223a0235
+      X-Response-Time:
+      - '106'
+      X-Tsa-Request-Body-Time:
+      - '1'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"errors":[{"code":89,"message":"Invalid or expired token."}]}'
+    http_version: 
+  recorded_at: Sun, 01 Oct 2017 13:11:52 GMT
+recorded_with: VCR 3.0.3

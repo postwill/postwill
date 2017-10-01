@@ -1,0 +1,152 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://graph.facebook.com/me/feed
+    body:
+      encoding: UTF-8
+      string: access_token=EAACEdEose0cBAMYzzvjpeK55C0C7GWCN5ZAHrLdCpm9qvBvHAxZBkLPW3GRxoJqGZCyzaDxTvlIX4xLrKHQX8rbhlJKxZCrktXIuEE76N7x2oXilF3zpRwynZA1ysfqz9m2Ngh6rtsYMCc38dRIIiLpUYZAtkuS3LLJkxyV2eSvPNSVK9cbMlXy0IOGZASiJ4zoznuiDHWcYwZDZD&message=test+api+explorer
+    headers:
+      User-Agent:
+      - Faraday v0.11.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      X-App-Usage:
+      - '{"call_count":1,"total_cputime":1,"total_time":1}'
+      X-Fb-Rev:
+      - '3335015'
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Fb-Trace-Id:
+      - FqkS0bufkwa
+      Facebook-Api-Version:
+      - v2.4
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      X-Fb-Debug:
+      - aaRTn6i1q8Za/Ihp1A/AiOW3yai4K7oCAU5MwTxy/vJBqbTdNa7uAnccxJ+uxyWlI+2ni1Z8/zjxTdAa/qBNow==
+      Date:
+      - Fri, 29 Sep 2017 08:43:09 GMT
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '41'
+    body:
+      encoding: UTF-8
+      string: '{"id":"941616485924155_1421411354611330"}'
+    http_version: 
+  recorded_at: Fri, 29 Sep 2017 08:43:10 GMT
+- request:
+    method: post
+    uri: https://graph.facebook.com/me/feed
+    body:
+      encoding: UTF-8
+      string: access_token=test&message=ping
+    headers:
+      User-Agent:
+      - Faraday v0.11.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Www-Authenticate:
+      - OAuth "Facebook Platform" "invalid_token" "Invalid OAuth access token."
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-store
+      X-Fb-Rev:
+      - '3338702'
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Fb-Trace-Id:
+      - EUBKqeKmIAz
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      X-Fb-Debug:
+      - 2WTIY5FLnk6QLWEBSXRa6p+VtV6bDD0Y64E6tMzhGf744kge5P5vR8lTYYwqq7+P5HfhPpuUN0zQ+NaIveZn5w==
+      Date:
+      - Sun, 01 Oct 2017 12:13:33 GMT
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '113'
+    body:
+      encoding: UTF-8
+      string: '{"error":{"message":"Invalid OAuth access token.","type":"OAuthException","code":190,"fbtrace_id":"EUBKqeKmIAz"}}'
+    http_version: 
+  recorded_at: Sun, 01 Oct 2017 12:13:36 GMT
+- request:
+    method: post
+    uri: https://graph.facebook.com/me/feed
+    body:
+      encoding: UTF-8
+      string: access_token=test&message=ping
+    headers:
+      User-Agent:
+      - Faraday v0.11.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Www-Authenticate:
+      - OAuth "Facebook Platform" "invalid_token" "Invalid OAuth access token."
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-store
+      X-Fb-Rev:
+      - '3338702'
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Fb-Trace-Id:
+      - Fr/kw+xPFh0
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      X-Fb-Debug:
+      - ZGU/VgQb7cfbUAlniYoRRsHUc8a/9MKwffwdZl1d/Xce/iRrnNcKY8K/U+qNoSix6eGUrgF2gGLKapDh7vbVFQ==
+      Date:
+      - Sun, 01 Oct 2017 12:13:41 GMT
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '114'
+    body:
+      encoding: UTF-8
+      string: '{"error":{"message":"Invalid OAuth access token.","type":"OAuthException","code":190,"fbtrace_id":"Fr\/kw+xPFh0"}}'
+    http_version: 
+  recorded_at: Sun, 01 Oct 2017 12:13:44 GMT
+recorded_with: VCR 3.0.3
