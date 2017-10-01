@@ -1,0 +1,207 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://graph.facebook.com/me/feed
+    body:
+      encoding: UTF-8
+      string: access_token=EAACEdEose0cBAKs2wCJNfjYNVvSvbJGUBnC9EynZBFBr7cRgGCmTR9HekVbBlBGw2CN9qHoh7NMgzVgR9DdU8fdz3hljDiWqVbv6iyno7DjYsZBUGZCIvJfZABfgrmcNfbdkWMbn0lvS40rarWosSAO50ojg5fVQupy8xs3H18wOUSI2f5xXZCwZBZADlCR7x2tUKKAizrdewZDZD&message=hello
+    headers:
+      User-Agent:
+      - Faraday v0.11.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      X-App-Usage:
+      - '{"call_count":1,"total_cputime":1,"total_time":1}'
+      X-Fb-Trace-Id:
+      - CztIBIVMKS9
+      Facebook-Api-Version:
+      - v2.4
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Fb-Rev:
+      - '3335015'
+      Cache-Control:
+      - no-store
+      Pragma:
+      - no-cache
+      Access-Control-Allow-Origin:
+      - "*"
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Www-Authenticate:
+      - OAuth "Facebook Platform" "invalid_request" "Duplicate status message"
+      Vary:
+      - Accept-Encoding
+      X-Fb-Debug:
+      - xiqOwpqik1kDjPOVF9eAK4PFtjX/mQbJRayMq59jI3sNbC/u9Vt7v36NE4kYYe9Jh3J6Jvzqtz+SsadKbHY7yw==
+      Date:
+      - Fri, 29 Sep 2017 08:40:34 GMT
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '244'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"error":{"message":"Duplicate status message","type":"OAuthException","code":506,"error_subcode":1455006,"is_transient":false,"error_user_title":"Duplicate
+        Status Update","error_user_msg":"This status update is identical to the last
+        one you posted. Try posting something different, or delete your previous update.","fbtrace_id":"CztIBIVMKS9"}}'
+    http_version: 
+  recorded_at: Fri, 29 Sep 2017 08:40:34 GMT
+- request:
+    method: post
+    uri: https://graph.facebook.com/me/feed
+    body:
+      encoding: UTF-8
+      string: access_token=test&message=hello
+    headers:
+      User-Agent:
+      - Faraday v0.11.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Www-Authenticate:
+      - OAuth "Facebook Platform" "invalid_token" "Invalid OAuth access token."
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-store
+      X-Fb-Rev:
+      - '3338702'
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Fb-Trace-Id:
+      - EwcyGhOP6UR
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      X-Fb-Debug:
+      - 5Avbz9WD0gMAIQT7WztaxZBzALPbJIeuC82AvniEn+mZD2AIlrYqaBbYCdCkSodDvQoeos6ndiUybP+EuEaQfQ==
+      Date:
+      - Sun, 01 Oct 2017 12:16:33 GMT
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '113'
+    body:
+      encoding: UTF-8
+      string: '{"error":{"message":"Invalid OAuth access token.","type":"OAuthException","code":190,"fbtrace_id":"EwcyGhOP6UR"}}'
+    http_version: 
+  recorded_at: Sun, 01 Oct 2017 12:16:36 GMT
+- request:
+    method: post
+    uri: https://graph.facebook.com/me/feed
+    body:
+      encoding: UTF-8
+      string: access_token=test&message=hello
+    headers:
+      User-Agent:
+      - Faraday v0.11.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Www-Authenticate:
+      - OAuth "Facebook Platform" "invalid_token" "Invalid OAuth access token."
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-store
+      X-Fb-Rev:
+      - '3338702'
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Fb-Trace-Id:
+      - HaNJpQos+Rg
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      X-Fb-Debug:
+      - GZwn/5groX81q103jveHquXsL2tEF4wrFGiVtKA9whO7T1iH/dvTvVDCdB6D2TW1yxfvBWi+FmED9SqKbRjKeg==
+      Date:
+      - Sun, 01 Oct 2017 12:16:53 GMT
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '113'
+    body:
+      encoding: UTF-8
+      string: '{"error":{"message":"Invalid OAuth access token.","type":"OAuthException","code":190,"fbtrace_id":"HaNJpQos+Rg"}}'
+    http_version: 
+  recorded_at: Sun, 01 Oct 2017 12:16:55 GMT
+- request:
+    method: post
+    uri: https://graph.facebook.com/me/feed
+    body:
+      encoding: UTF-8
+      string: access_token=test&message=hello
+    headers:
+      User-Agent:
+      - Faraday v0.11.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Www-Authenticate:
+      - OAuth "Facebook Platform" "invalid_token" "Invalid OAuth access token."
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-store
+      X-Fb-Rev:
+      - '3338702'
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Fb-Trace-Id:
+      - Av3c2zZz1IP
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      X-Fb-Debug:
+      - dS2AJB9/kdpaNvBZhEEBCeWlrZCFdFc/+a+wjIZzyVC6rCbnjAGtnD1PvJy+O12DLenzXFilt5IoPVvDehxtuw==
+      Date:
+      - Sun, 01 Oct 2017 12:17:03 GMT
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '113'
+    body:
+      encoding: UTF-8
+      string: '{"error":{"message":"Invalid OAuth access token.","type":"OAuthException","code":190,"fbtrace_id":"Av3c2zZz1IP"}}'
+    http_version: 
+  recorded_at: Sun, 01 Oct 2017 12:17:06 GMT
+recorded_with: VCR 3.0.3
