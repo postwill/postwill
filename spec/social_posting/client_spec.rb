@@ -29,6 +29,32 @@ describe SocialPosting::Client do
         end
       end
     end
+
+    context 'multiple providers' do
+      it 'everything is fine' do
+        VCR.use_cassette('twitter_valid') do
+          VCR.use_cassette('facebook_valid') do
+            social_posting = subject.new(data)
+            response = social_posting.to([:twitter, :facebook], 'text')
+
+            expect(response[0][:twitter][:status]).to eq :ok
+            expect(response[1][:facebook][:status]).to eq :ok
+          end
+        end
+      end
+
+      it 'one of providers is failed' do
+        VCR.use_cassette('twitter_valid') do
+          VCR.use_cassette('facebook_invalid') do
+            social_posting = subject.new(data)
+            response = social_posting.to([:twitter, :facebook], 'text')
+
+            expect(response[0][:twitter][:status]).to eq :ok
+            expect(response[1][:facebook][:status]).to eq :error
+          end
+        end
+      end
+    end
   end
 
   describe 'instance_providers' do
