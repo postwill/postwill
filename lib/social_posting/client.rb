@@ -24,9 +24,9 @@ module SocialPosting
       PROVIDERS.each do |provider|
         next unless data[provider]
 
-        instance_variable_set("@#{provider}", Object.const_get(['SocialPosting::Providers::',
-                                                                provider.to_s.capitalize].join)
-                                                                .new(data[provider]))
+        provider_class = Object.const_get("SocialPosting::Providers::#{provider.to_s.capitalize}")
+
+        instance_variable_set("@#{provider}", provider_class.new(data[provider]))
       end
     end
   end
