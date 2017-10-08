@@ -3,15 +3,15 @@ module SocialPosting
     class Base
       attr_reader :client
 
-      def call(text = nil, image = nil)
-        Dry::Monads::Right post(text, image)
-      rescue Exception => e
-        Dry::Monads::Left e
+      def call(options = {})
+        Dry::Monads::Right(post(options))
+      rescue Exception => error
+        Dry::Monads::Left(error)
       end
 
       private
 
-      def post(text, image)
+      def post(options)
         raise NotImplementedError
       end
     end

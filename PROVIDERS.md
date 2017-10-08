@@ -10,31 +10,27 @@ social_posting = SocialPosting::Client.new(
                    }
                  )
 
-social_posting.to(:twitter, 'text', 'image')
+social_posting.to(:twitter, text: 'text', image: 'image')
 ```
 
 Success:
 ```ruby
-[
-  {
-    twitter: {
-      status: :ok,
-      response: {}
-    }
+{
+  twitter: {
+    status: :ok,
+    response: {} # Response data
   }
-]
+}
 ```
 
 Failure:
 ```ruby
-[
-  {
-    twitter: {
-      status: :error,
-      response: ''
-    }
+{
+  twitter: {
+    status: :error,
+    response: '' # String error message
   }
-]
+}
 ```
 
 Settings:
@@ -58,29 +54,71 @@ social_posting = SocialPosting::Client.new(
                    }
                  )
 
-social_posting.to(:facebook, 'text', 'image')
+social_posting.to(:facebook, text: 'text', image: 'image')
 ```
 
 Success:
 ```ruby
-[
-  {
-    facebook: {
-      status: :ok,
-      response: {}
-    }
+{
+  facebook: {
+    status: :ok,
+    response: {} # Response data
   }
-]
+}
 ```
 
 Failure:
 ```ruby
-[
-  {
-    facebook: {
-      status: :error,
-      response: ''
+{
+  facebook: {
+    status: :error,
+    response: '' # String error message
+  }
+}
+```
+
+# Pinterest
+
+Based on: [PinterestApi](https://github.com/realadeel/pinterest-api)
+
+```ruby
+social_posting = SocialPosting::Client.new(
+                   pinterest: {
+                     access_token: 'access_token'
+                   }
+                 )
+
+# Reqired: [board_id image image_url]
+# Optional: [text link]
+
+social_posting.to(:pinterest, text: 'text', image: 'image', board_id: 'board_id', link: 'link')
+# OR
+social_posting.to(:pinterest, text: 'text', image_url: 'image_url', board_id: 'board_id', link: 'link')
+```
+
+Success:
+```ruby
+{
+  pinterest: {
+    status: :ok,
+    response: {
+      'data' => {
+        'url' => 'PIN_LINK',
+        'note' => 'text',
+        'link' => 'LINK',
+        'id' => 'PIN_ID'
+      }
     }
   }
-]
+}
+```
+
+Failure:
+```ruby
+{
+  pinterest: {
+    status: :error,
+    response: '' # String error message
+  }
+}
 ```

@@ -1,0 +1,161 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.pinterest.com/v1/pins/
+    body:
+      encoding: UTF-8
+      string: image_url=https%3A%2F%2Frobohash.org%2Fdolorumdelectusvoluptas.png%3Fsize%3D300x300&note=hello
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - Pinterest Ruby Gem 0.4.0
+      Authorization:
+      - BEARER AREWF3xT5GMd1Wup8Zm0pb8k2o-EFOuZpI-zSfhEYRLvBaBHdwAAAAA
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 400
+      message: BAD REQUEST
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Age:
+      - '0'
+      Cache-Control:
+      - private
+      Content-Type:
+      - application/json
+      Pinterest-Version:
+      - 96f8e62
+      X-Content-Type-Options:
+      - nosniff
+      X-Pinterest-Rid:
+      - '985513317088'
+      X-Ratelimit-Limit:
+      - '200'
+      X-Ratelimit-Remaining:
+      - '173'
+      Content-Length:
+      - '78'
+      Date:
+      - Sun, 08 Oct 2017 13:45:41 GMT
+      Connection:
+      - keep-alive
+      Pinterest-Generated-By:
+      - devplatform-devapi-prod-0a012f8f
+    body:
+      encoding: UTF-8
+      string: '{"message": "Parameter ''board'' is required.", "type": "api", "param":
+        "board"}'
+    http_version: 
+  recorded_at: Sun, 08 Oct 2017 13:45:41 GMT
+- request:
+    method: post
+    uri: https://api.pinterest.com/v1/pins/
+    body:
+      encoding: UTF-8
+      string: image_url=https%3A%2F%2Frobohash.org%2Fdolorumdelectusvoluptas.png%3Fsize%3D300x300&note=hello
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - Pinterest Ruby Gem 0.4.0
+      Authorization:
+      - BEARER AREWF3xT5GMd1Wup8Zm0pb8k2o-EFOuZpI-zSfhEYRLvBaBHdwAAAAA
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 400
+      message: BAD REQUEST
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Age:
+      - '0'
+      Cache-Control:
+      - private
+      Content-Type:
+      - application/json
+      Pinterest-Version:
+      - 96f8e62
+      X-Content-Type-Options:
+      - nosniff
+      X-Pinterest-Rid:
+      - '244051609913'
+      X-Ratelimit-Limit:
+      - '200'
+      X-Ratelimit-Remaining:
+      - '173'
+      Content-Length:
+      - '78'
+      Date:
+      - Sun, 08 Oct 2017 13:50:39 GMT
+      Connection:
+      - keep-alive
+      Pinterest-Generated-By:
+      - devplatform-devapi-prod-0a01633a
+    body:
+      encoding: UTF-8
+      string: '{"message": "Parameter ''board'' is required.", "type": "api", "param":
+        "board"}'
+    http_version: 
+  recorded_at: Sun, 08 Oct 2017 13:50:39 GMT
+- request:
+    method: post
+    uri: https://api.twitter.com/1.1/statuses/update.json
+    body:
+      encoding: UTF-8
+      string: status=test+api+explorer
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/6.1.0
+      Authorization:
+      - OAuth oauth_consumer_key="", oauth_nonce="df1b610fe6c11b7a54f7ead138431620",
+        oauth_signature="dGk65rjnQHVgricO4TJMxPlR8Sk%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1507470684", oauth_token="PILF740827MSPBKTE9", oauth_version="1.0"
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Content-Length:
+      - '87'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 08 Oct 2017 13:51:28 GMT
+      Server:
+      - tsa_o
+      Set-Cookie:
+      - guest_id=v1%3A150747068807678201; Expires=Tue, 08 Oct 2019 13:51:28 UTC; Path=/;
+        Domain=.twitter.com
+      - personalization_id="v1_ALJBUMuAItlU90NaxcOg0A=="; Expires=Tue, 08 Oct 2019
+        13:51:28 UTC; Path=/; Domain=.twitter.com
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Connection-Hash:
+      - 74fa47cc9fb7f45061cbbeb0256e611e
+      X-Response-Time:
+      - '104'
+      X-Tsa-Request-Body-Time:
+      - '60'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"errors":[{"code":215,"message":"Bad Authentication data."}]}'
+    http_version: 
+  recorded_at: Sun, 08 Oct 2017 13:51:29 GMT
+recorded_with: VCR 3.0.3

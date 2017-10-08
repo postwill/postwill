@@ -3,13 +3,15 @@ require 'dry-configurable'
 require 'dry-monads'
 require 'twitter'
 require 'koala'
+require 'pinterest-api'
 
-require 'social_posting/settings'
-require 'social_posting/providers/base'
-require 'social_posting/providers/twitter'
-require 'social_posting/providers/facebook'
-require 'social_posting/response'
-require 'social_posting/client'
+require_relative 'social_posting/settings'
+require_relative 'social_posting/providers/base'
+require_relative 'social_posting/providers/twitter'
+require_relative 'social_posting/providers/facebook'
+require_relative 'social_posting/providers/pinterest'
+require_relative 'social_posting/response'
+require_relative 'social_posting/client'
 
 module SocialPosting
 end

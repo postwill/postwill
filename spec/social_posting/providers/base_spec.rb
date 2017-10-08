@@ -8,7 +8,7 @@ describe SocialPosting::Providers::Base do
 
   describe 'post' do
     it 'should be template method' do
-      expect{ subject.send(:post, nil, nil) }.to raise_error 'NotImplementedError'
+      expect{ subject.send(:post, {}) }.to raise_error 'NotImplementedError'
     end
   end
 end

@@ -1,8 +1,7 @@
 describe SocialPosting::Client do
   let(:data) do
     {
-      twitter: { access_token: FFaker::IdentificationMX.curp,
-                 access_token_secret: FFaker::IdentificationMX.curp},
+      twitter: { access_token: FFaker::IdentificationMX.curp, access_token_secret: FFaker::IdentificationMX.curp },
       facebook: { access_token: FFaker::IdentificationMX.curp }
     }
   end
@@ -14,18 +13,18 @@ describe SocialPosting::Client do
       it 'should returns :ok' do
         VCR.use_cassette('twitter_valid') do
           social_posting = subject.new(data)
-          response = social_posting.to(:twitter, 'text')
+          response = social_posting.to(:twitter, text: 'text')
 
-          expect(response[0][:twitter][:status]).to eq :ok
+          expect(response[:twitter][:status]).to eq :ok
         end
       end
 
       it 'should returns :error' do
         VCR.use_cassette('twitter_invalid') do
           social_posting = subject.new(data)
-          response = social_posting.to(:twitter, 'text')
+          response = social_posting.to(:twitter, text: 'text')
 
-          expect(response[0][:twitter][:status]).to eq :error
+          expect(response[:twitter][:status]).to eq :error
         end
       end
     end
@@ -35,10 +34,10 @@ describe SocialPosting::Client do
         VCR.use_cassette('twitter_valid') do
           VCR.use_cassette('facebook_valid') do
             social_posting = subject.new(data)
-            response = social_posting.to([:twitter, :facebook], 'text')
+            response = social_posting.to(%i[twitter facebook], text: 'text')
 
-            expect(response[0][:twitter][:status]).to eq :ok
-            expect(response[1][:facebook][:status]).to eq :ok
+            expect(response[:twitter][:status]).to eq :ok
+            expect(response[:facebook][:status]).to eq :ok
           end
         end
       end
@@ -47,10 +46,10 @@ describe SocialPosting::Client do
         VCR.use_cassette('twitter_valid') do
           VCR.use_cassette('facebook_invalid') do
             social_posting = subject.new(data)
-            response = social_posting.to([:twitter, :facebook], 'text')
+            response = social_posting.to(%i[twitter facebook], text: 'text')
 
-            expect(response[0][:twitter][:status]).to eq :ok
-            expect(response[1][:facebook][:status]).to eq :error
+            expect(response[:twitter][:status]).to eq :ok
+            expect(response[:facebook][:status]).to eq :error
           end
         end
       end

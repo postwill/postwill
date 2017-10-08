@@ -1,11 +1,7 @@
 describe SocialPosting::Response do
   describe '.call' do
     it 'should return response hash' do
-      expect(described_class.call('twitter', :ok, {})).to eq({
-                                                       twitter: {
-                                                         status: :ok, response: {}
-                                                       }
-                                                     })
+      expect(described_class.call(:ok, {})).to eq(status: :ok, response: {})
     end
   end
 end
