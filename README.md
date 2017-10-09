@@ -32,31 +32,27 @@ social_posting = SocialPosting::Client.new(
                    }
                  )
 
-social_posting.to(:twitter, 'text', 'image')
+social_posting.to(:twitter, text: 'text', image: 'image')
 ```
 
 Success:
 ```ruby
-[
-  {
-    twitter: {
-      status: :ok,
-      response: {} # Hash of response data depends on provider
-    }
+{
+  twitter: {
+    status: :ok,
+    response: {} # Hash of response data depends on provider
   }
-]
+}
 ```
 
 Failure:
 ```ruby
-[
-  {
-    twitter: {
-      status: :error,
-      response: '' # String error message
-    }
+{
+  twitter: {
+    status: :error,
+    response: '' # String error message
   }
-]
+}
 ```
 
 Application credentials
@@ -84,23 +80,21 @@ social_posting = SocialPosting::Client.new(
                    }
                  )
 
-social_posting.to(%w[twitter facebook], 'text', 'image')
+social_posting.to(%i[twitter facebook], text: 'text', image: 'image')
 ```
 
 Result:
 ```ruby
-[
-  {
-    twitter: {
-      status: :ok,
-      response: {}
-    },
-    facebook: {
-      status: :ok,
-      response: {}
-    }
+{
+  twitter: {
+    status: :ok,
+    response: {} # Response data
+  },
+  facebook: {
+    status: :ok,
+    response: {} # Response data
   }
-]
+}
 ```
 
 Application credentials(for providers which need them)

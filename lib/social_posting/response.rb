@@ -1,11 +1,9 @@
 module SocialPosting
   class Response
-    def self.call(provider, type, value)
+    def self.call(type, value)
       {
-        "#{provider}": {
-          status: type,
-          response: value
-        }
+        status: type,
+        response: value
       }
     end
   end

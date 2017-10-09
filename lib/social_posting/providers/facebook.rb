@@ -7,7 +7,10 @@ module SocialPosting
 
       private
 
-      def post(text, image)
+      def post(options)
+        image = options[:image]
+        text = options[:text]
+
         if image
           client.put_picture(image, { message: text })
         else

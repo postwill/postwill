@@ -12,7 +12,10 @@ module SocialPosting
 
       private
 
-      def post(text, image)
+      def post(options)
+        image = options[:image]
+        text = options[:text]
+
         response = image ? client.update_with_media(text, image) : client.update(text)
         response.to_h
       end
