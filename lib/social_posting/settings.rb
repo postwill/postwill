@@ -4,6 +4,7 @@ module SocialPosting
 
     setting :providers do
       setting :twitter, {}
+      setting :tumblr, {}
     end
   end
 end

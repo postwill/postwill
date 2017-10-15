@@ -19,9 +19,9 @@ module SocialPosting
         response(client.create_pin(params).to_h)
       end
 
-      def response(result_post)
-        raise Exception, result_post['message'] unless result_post.dig('data', 'id')
-        result_post
+      def response(result)
+        raise Exception, result['message'] unless result.dig('data', 'id')
+        result
       end
     end
   end
