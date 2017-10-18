@@ -1,0 +1,58 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://instagram.com/api/v1/accounts/login/
+    body:
+      encoding: UTF-8
+      string: ig_sig_key_version=4&signed_body=99787a379a7590dc80e7959d34ce92aca685cdd66204a8a7b75c38099e7895b5.%7B%22username%22%3A%22rspecyaroslav%22%2C%22password%22%3A%22rspecyaroslav555%22%2C%22guid%22%3A%223e98dd24%2Db80d%2D4082%2D831f%2D6c006f16f73b%22%2C%22device_id%22%3A%22android%2D3e98dd24%2Db80d%2D4082%2D831f%2D6c006f16f73b%22%2C%22Content%2DType%22%3A%22application%2Fx%2Dwww%2Dform%2Durlencoded%3B%20charset%3DUTF%2D8%22%7D
+    headers:
+      User-Agent:
+      - Instagram 4.2.1 Android (10/2.5.0; 120; 720x1280; samsung; GT-I9100; GT-I9100;
+        smdkc210; ru_RU)
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Cookie, Accept-Language, Accept-Encoding
+      Content-Language:
+      - en
+      Date:
+      - Wed, 18 Oct 2017 21:06:24 GMT
+      Set-Cookie:
+      - csrftoken=KL4qJlHvURUYf60PI2hNqK1F9lSDncy2; expires=Wed, 17-Oct-2018 21:06:24
+        GMT; Max-Age=31449600; Path=/; Secure
+      - ds_user=rspecyaroslav; expires=Tue, 16-Jan-2018 21:06:24 GMT; Max-Age=7776000;
+        Path=/
+      - ds_user_id=6132160267; expires=Tue, 16-Jan-2018 21:06:24 GMT; Max-Age=7776000;
+        Path=/
+      - mid=WefCUAABAAGZKHNubfxw16kqb1Tt; expires=Tue, 13-Oct-2037 21:06:24 GMT; Max-Age=630720000;
+        Path=/
+      - rur=FTW; Path=/
+      - sessionid=IGSCcf40509b051265abc94ad8862bbc4dfa631d218031d54fc18f634d386733ce2b%3AUNZdmyzhszBN4keleiegnnNROuaU7YsY%3A%7B%22_auth_user_id%22%3A6132160267%2C%22_auth_user_backend%22%3A%22accounts.backends.CaseInsensitiveModelBackend%22%2C%22_auth_user_hash%22%3A%22%22%2C%22_token_ver%22%3A2%2C%22_token%22%3A%226132160267%3AruxdKbyjvU4TpXT24Ya3xnhcMVjoxr0v%3A90363db9db751e901d5d84136c8af30c239ef61349f06d26cdd735404baf52ea%22%2C%22_platform%22%3A1%2C%22last_refreshed%22%3A1508360784.6981055737%7D;
+        expires=Tue, 16-Jan-2018 21:06:24 GMT; HttpOnly; Max-Age=7776000; Path=/;
+        Secure
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '429'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"logged_in_user": {"pk": 6132160267, "username": "rspecyaroslav",
+        "full_name": "rspecyaroslav", "is_private": false, "profile_pic_url": "https://scontent-gru2-2.cdninstagram.com/t51.2885-19/11906329_960233084022564_1448528159_a.jpg",
+        "is_verified": false, "has_anonymous_profile_picture": true, "is_business":
+        false, "can_see_organic_insights": false, "show_insights_terms": false, "allow_contacts_sync":
+        false}, "status": "ok"}'
+    http_version: 
+  recorded_at: Wed, 18 Oct 2017 21:06:24 GMT
+recorded_with: VCR 3.0.3

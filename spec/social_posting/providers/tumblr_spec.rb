@@ -5,7 +5,7 @@ describe SocialPosting::Providers::Tumblr do
   end
 
   let(:text) { 'test api explorer' }
-  let(:image) { 'test.png' }
+  let(:image) { 'test.jpg' }
   let(:user) { 'usernickname' }
 
   describe '#call' do
