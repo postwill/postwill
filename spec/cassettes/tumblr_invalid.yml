@@ -1,0 +1,118 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.tumblr.com/v2/blog/usernickname.tumblr.com/post
+    body:
+      encoding: UTF-8
+      string: body&title&type=text
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - tumblr_client/0.8.5
+      Authorization:
+      - OAuth oauth_consumer_key="pOArLX9ZeJwbNHgX8AshUQhBFshJHbsp6aDtuwK8Fl5tzbCYAz",
+        oauth_nonce="18ebc09b5b07eb4e8c5034a252236a16", oauth_signature="XWUI0puODyxMuDu%2FgdTnMZrUMWo%3D",
+        oauth_signature_method="HMAC-SHA1", oauth_timestamp="1508087877", oauth_token="b9eUI47iPEYX7dxDm8y5MK8AYocKF6P0prcyCFLR1ih49VZ7Sh",
+        oauth_version="1.0"
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Server:
+      - ATS
+      Date:
+      - Sun, 15 Oct 2017 17:17:57 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Set-Cookie:
+      - tmgioct=59e39845bad8b30341246490; expires=Mon, 15-Oct-2018 17:17:57 GMT; Max-Age=31536000;
+        path=/; domain=.tumblr.com; HttpOnly
+      Strict-Transport-Security:
+      - max-age=15552001
+      P3p:
+      - 'CP="Tumblr''s privacy policy is available here: https://www.tumblr.com/policy/en/privacy"'
+      X-Ratelimit-Perday-Limit:
+      - '5000'
+      X-Ratelimit-Perday-Remaining:
+      - '4957'
+      X-Ratelimit-Perday-Reset:
+      - '67515'
+      X-Ratelimit-Perhour-Limit:
+      - '1000'
+      X-Ratelimit-Perhour-Remaining:
+      - '969'
+      X-Ratelimit-Perhour-Reset:
+      - '938'
+      Age:
+      - '0'
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Via:
+      - https/1.1 e11.ycpi.deb.yahoo.com (ApacheTrafficServer [cMs f ])
+    body:
+      encoding: UTF-8
+      string: '{"meta":{"status":400,"msg":"Bad Request"},"response":{"errors":["Post
+        cannot be empty."]}}'
+    http_version:
+  recorded_at: Sun, 15 Oct 2017 17:17:57 GMT
+- request:
+    method: post
+    uri: https://api.tumblr.com/v2/blog/usernickname.tumblr.com/post
+    body:
+      encoding: UTF-8
+      string: body&title&type=text
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - tumblr_client/0.8.5
+      Authorization:
+      - OAuth oauth_consumer_key="", oauth_nonce="88e0d892d9ef117a9467abf4602027b3",
+        oauth_signature="jNLRVcYQm8ue9PGMRpD7%2FiXgbzk%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1508088462", oauth_token="POMG160922HCHDJFZ8", oauth_version="1.0"
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - ATS
+      Date:
+      - Sun, 15 Oct 2017 17:27:43 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Set-Cookie:
+      - tmgioct=59e39a8f013b220833660490; expires=Mon, 15-Oct-2018 17:27:43 GMT; Max-Age=31536000;
+        path=/; domain=.tumblr.com; HttpOnly
+      Strict-Transport-Security:
+      - max-age=15552001
+      P3p:
+      - 'CP="Tumblr''s privacy policy is available here: https://www.tumblr.com/policy/en/privacy"'
+      Age:
+      - '1'
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Via:
+      - https/1.1 e15.ycpi.deb.yahoo.com (ApacheTrafficServer [cMs f ])
+    body:
+      encoding: UTF-8
+      string: '{"meta":{"status":401,"msg":"Unauthorized"},"response":[],"errors":[{"title":"Unauthorized","detail":"Unable
+        to authorize"}]}'
+    http_version:
+  recorded_at: Sun, 15 Oct 2017 17:27:43 GMT
+recorded_with: VCR 3.0.3
