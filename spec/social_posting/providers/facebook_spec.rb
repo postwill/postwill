@@ -11,7 +11,7 @@ describe SocialPosting::Providers::Facebook do
 
       it 'should have it key' do
         VCR.use_cassette('facebook_valid') do
-          expect(subject.call(text: 'test api explorer').value.has_key?('id')).to be_truthy
+          expect(subject.call(text: 'test api explorer').value.key?('id')).to be_truthy
         end
       end
     end
