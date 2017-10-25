@@ -1,0 +1,173 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://instagram.com/api/v1/accounts/login/
+    body:
+      encoding: UTF-8
+      string: ig_sig_key_version=4&signed_body=07a24d54f4e38f7b87a89ccda6d85d9ab51906df217622ed5ecd76c8f9fa3d6e.%7B%22username%22%3A%22rspecyaroslav%22%2C%22password%22%3A%22rspecyaroslav555%22%2C%22guid%22%3A%2243a699d0%2D12db%2D4d96%2D95c8%2Dbc21b0767ce8%22%2C%22device_id%22%3A%22android%2D43a699d0%2D12db%2D4d96%2D95c8%2Dbc21b0767ce8%22%2C%22Content%2DType%22%3A%22application%2Fx%2Dwww%2Dform%2Durlencoded%3B%20charset%3DUTF%2D8%22%7D
+    headers:
+      User-Agent:
+      - Instagram 4.2.1 Android (11/1.5.0; 320; 720x1280; samsung; SM-N9000; SM-N9000;
+        smdkc210; ru_RU)
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Cookie, Accept-Language, Accept-Encoding
+      Content-Language:
+      - en
+      Date:
+      - Wed, 18 Oct 2017 21:06:18 GMT
+      Set-Cookie:
+      - csrftoken=KtnThsQ399QrtMFNuiCdsweFfS8bMaHg; expires=Wed, 17-Oct-2018 21:06:18
+        GMT; Max-Age=31449600; Path=/; Secure
+      - ds_user=rspecyaroslav; expires=Tue, 16-Jan-2018 21:06:18 GMT; Max-Age=7776000;
+        Path=/
+      - ds_user_id=6132160267; expires=Tue, 16-Jan-2018 21:06:18 GMT; Max-Age=7776000;
+        Path=/
+      - mid=WefCSQABAAEInIDPGAnk7edJCEUT; expires=Tue, 13-Oct-2037 21:06:18 GMT; Max-Age=630720000;
+        Path=/
+      - rur=FTW; Path=/
+      - sessionid=IGSCf5ed3271ff04785e9a8122c096880c38bf4c4a670fc64aceb96dc581bb6f3f9b%3Al0b1VWh0ypy97zbPC0JrYlEcClIi2zQq%3A%7B%22_auth_user_id%22%3A6132160267%2C%22_auth_user_backend%22%3A%22accounts.backends.CaseInsensitiveModelBackend%22%2C%22_auth_user_hash%22%3A%22%22%2C%22_token_ver%22%3A2%2C%22_token%22%3A%226132160267%3AhGMsMvjLDLu2D8YPrhnAWf7NJFDKo79x%3A9d5b5df685215f65960d1fa87997cb0c314a4579921c7e1ca64f9b0a8d3302d7%22%2C%22_platform%22%3A1%2C%22last_refreshed%22%3A1508360778.4411101341%7D;
+        expires=Tue, 16-Jan-2018 21:06:18 GMT; HttpOnly; Max-Age=7776000; Path=/;
+        Secure
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '429'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"logged_in_user": {"pk": 6132160267, "username": "rspecyaroslav",
+        "full_name": "rspecyaroslav", "is_private": false, "profile_pic_url": "https://scontent-cdt1-1.cdninstagram.com/t51.2885-19/11906329_960233084022564_1448528159_a.jpg",
+        "is_verified": false, "has_anonymous_profile_picture": true, "is_business":
+        false, "can_see_organic_insights": false, "show_insights_terms": false, "allow_contacts_sync":
+        false}, "status": "ok"}'
+    http_version:
+  recorded_at: Wed, 18 Oct 2017 21:06:18 GMT
+- request:
+    method: post
+    uri: https://instagram.com/api/v1/media/upload/
+    body:
+      encoding: US-ASCII
+      string: photo=spec/fixtures/test.jpg&device_timestamp=1508360778
+    headers:
+      User-Agent:
+      - Instagram 4.2.1 Android (11/1.5.0; 320; 720x1280; samsung; SM-N9000; SM-N9000;
+        smdkc210; ru_RU)
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 18 Oct 2017 21:06:19 GMT
+      - Wed, 18 Oct 2017 21:06:20 GMT
+      Server:
+      - nginx
+      Content-Type:
+      - application/json
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Cookie, Accept-Language
+      Content-Language:
+      - en
+      Set-Cookie:
+      - csrftoken=KtnThsQ399QrtMFNuiCdsweFfS8bMaHg; expires=Wed, 17-Oct-2018 21:06:20
+        GMT; Max-Age=31449600; Path=/; Secure
+      - ds_user_id=6132160267; expires=Tue, 16-Jan-2018 21:06:20 GMT; Max-Age=7776000;
+        Path=/
+      - rur=ATN; Path=/
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '42'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"media_id": "1508360778", "status": "ok"}'
+    http_version:
+  recorded_at: Wed, 18 Oct 2017 21:06:20 GMT
+- request:
+    method: post
+    uri: https://instagram.com/api/v1/media/configure/
+    body:
+      encoding: UTF-8
+      string: ig_sig_key_version=4&signed_body=bbb9c40e4d37f77b58a12830274f1a027ed36c69937c3f3fb48d524c8cbfec3f.%7B%22device_timestamp%22%3A%221508360780%22%2C%22media_id%22%3A%221508360778%22%2C%22caption%22%3A%22test%20api%20explorer%22%2C%22source_type%22%3A5%2C%22filter_type%22%3A0%2C%22extra%22%3A%7B%7D%2C%22guid%22%3A%2243a699d0%2D12db%2D4d96%2D95c8%2Dbc21b0767ce8%22%2C%22device_id%22%3A%22android%2D43a699d0%2D12db%2D4d96%2D95c8%2Dbc21b0767ce8%22%2C%22Content%2DType%22%3A%22application%2Fx%2Dwww%2Dform%2Durlencoded%3B%20charset%3DUTF%2D8%22%7D
+    headers:
+      User-Agent:
+      - Instagram 4.2.1 Android (11/1.5.0; 320; 720x1280; samsung; SM-N9000; SM-N9000;
+        smdkc210; ru_RU)
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Cookie, Accept-Language, Accept-Encoding
+      Content-Language:
+      - en
+      Date:
+      - Wed, 18 Oct 2017 21:06:23 GMT
+      Set-Cookie:
+      - csrftoken=KtnThsQ399QrtMFNuiCdsweFfS8bMaHg; expires=Wed, 17-Oct-2018 21:06:23
+        GMT; Max-Age=31449600; Path=/; Secure
+      - ds_user_id=6132160267; expires=Tue, 16-Jan-2018 21:06:23 GMT; Max-Age=7776000;
+        Path=/
+      - rur=ATN; Path=/
+      - 'urlgen="{\"time\": 1508360783}:1e4vXj:0h2Ze6eaUBqmcneknESFk9YmIrk"; Path=/'
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '2517'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"media": {"taken_at": 1508360781, "pk": 1628570727908383424, "id":
+        "1628570727908383424_6132160267", "device_timestamp": 1508360778, "media_type":
+        1, "code": "BaZ2HLQlBrA", "client_cache_key": "MTYyODU3MDcyNzkwODM4MzQyNA==.2",
+        "filter_type": 0, "image_versions": [{"type": 7, "width": 640, "height": 640,
+        "url": "https://instagram.fhrk1-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/22637776_804066356465040_1349704162941599744_n.jpg"},
+        {"type": 6, "width": 320, "height": 320, "url": "https://instagram.fhrk1-1.fna.fbcdn.net/t51.2885-15/s320x320/e15/22637776_804066356465040_1349704162941599744_n.jpg"},
+        {"type": 5, "width": 150, "height": 150, "url": "https://instagram.fhrk1-1.fna.fbcdn.net/t51.2885-15/s150x150/e15/22637776_804066356465040_1349704162941599744_n.jpg"}],
+        "user": {"pk": 6132160267, "username": "rspecyaroslav", "full_name": "rspecyaroslav",
+        "is_private": false, "profile_pic_url": "https://instagram.fgyn3-1.fna.fbcdn.net/t51.2885-19/11906329_960233084022564_1448528159_a.jpg",
+        "has_anonymous_profile_picture": true, "can_boost_post": false, "can_see_organic_insights":
+        false, "show_insights_terms": false, "is_unpublished": false, "allowed_commenter_type":
+        "any"}, "caption": {"pk": 17844832495212486, "user_id": 6132160267, "text":
+        "test api explorer", "type": 1, "created_at": 1508360781, "created_at_utc":
+        1508360781, "content_type": "comment", "status": "Active", "bit_flags": 0,
+        "user": {"pk": 6132160267, "username": "rspecyaroslav", "full_name": "rspecyaroslav",
+        "is_private": false, "profile_pic_url": "https://instagram.fgyn3-1.fna.fbcdn.net/t51.2885-19/11906329_960233084022564_1448528159_a.jpg",
+        "has_anonymous_profile_picture": true, "can_boost_post": false, "can_see_organic_insights":
+        false, "show_insights_terms": false, "is_unpublished": false, "allowed_commenter_type":
+        "any"}, "did_report_as_spam": false, "media_id": 1628570727908383424}, "caption_is_edited":
+        false, "comment_likes_enabled": false, "comment_threading_enabled": false,
+        "has_more_comments": false, "max_num_visible_preview_comments": 4, "preview_comments":
+        [], "comments": [], "comment_count": 1, "photo_of_you": false, "organic_tracking_token":
+        "eyJ2ZXJzaW9uIjo1LCJwYXlsb2FkIjp7ImlzX2FuYWx5dGljc190cmFja2VkIjpmYWxzZSwidXVpZCI6IjI5MDFlMWIyMTRiZDQ1YjFhMmExNWRkYzcyMGExOGQ0MTYyODU3MDcyNzkwODM4MzQyNCIsInNlcnZlcl90b2tlbiI6IjE1MDgzNjA3ODIyNTN8MTYyODU3MDcyNzkwODM4MzQyNHw2MTMyMTYwMjY3fGVlMTliODU1ODUzNDZmN2NiMDI2ZWFkMTEwNDBkNmI1OWM2ZTg3YjVjOTEzNTdiZTM3ZmE2NTk5NjA0ZmY2MzUifSwic2lnbmF0dXJlIjoiIn0="},
+        "status": "ok"}'
+    http_version:
+  recorded_at: Wed, 18 Oct 2017 21:06:23 GMT
+recorded_with: VCR 3.0.3
