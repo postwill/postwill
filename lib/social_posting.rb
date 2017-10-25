@@ -13,7 +13,6 @@ require_relative 'social_posting/providers/twitter'
 require_relative 'social_posting/providers/facebook'
 require_relative 'social_posting/providers/pinterest'
 require_relative 'social_posting/providers/tumblr'
-require_relative 'social_posting/providers/instagram'
 require_relative 'social_posting/response'
 require_relative 'social_posting/client'
 

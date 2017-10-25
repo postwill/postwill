@@ -1,6 +1,6 @@
 module SocialPosting
   class Client
-    PROVIDERS = %i[twitter facebook pinterest tumblr instagram]
+    PROVIDERS = %i[twitter facebook pinterest tumblr]
 
     def initialize(data)
       instance_providers(data)

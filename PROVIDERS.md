@@ -125,7 +125,7 @@ Failure:
 
 # Tumblr
 
-Based on: [TumblrClient](https://github.com/tumblr/tumblr_client)
+Based on: [PinterestApi](https://github.com/realadeel/pinterest-api)
 
 ```ruby
 SocialPosting::Settings.configure do |config|
