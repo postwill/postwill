@@ -4,7 +4,7 @@ describe SocialPosting::Providers::Instagram do
   end
 
   let(:text) { 'test api explorer' }
-  let(:image) { 'test.jpg' }
+  let(:image) { 'spec/fixtures/test.jpg' }
 
   describe '#call' do
     context 'if everything is ok' do

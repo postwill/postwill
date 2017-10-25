@@ -53,6 +53,6 @@ http_interactions:
         "is_verified": false, "has_anonymous_profile_picture": true, "is_business":
         false, "can_see_organic_insights": false, "show_insights_terms": false, "allow_contacts_sync":
         false}, "status": "ok"}'
-    http_version: 
+    http_version:
   recorded_at: Wed, 18 Oct 2017 21:06:24 GMT
 recorded_with: VCR 3.0.3

@@ -53,14 +53,14 @@ http_interactions:
         "is_verified": false, "has_anonymous_profile_picture": true, "is_business":
         false, "can_see_organic_insights": false, "show_insights_terms": false, "allow_contacts_sync":
         false}, "status": "ok"}'
-    http_version: 
+    http_version:
   recorded_at: Wed, 18 Oct 2017 21:06:18 GMT
 - request:
     method: post
     uri: https://instagram.com/api/v1/media/upload/
     body:
       encoding: US-ASCII
-      string: photo=test.jpg&device_timestamp=1508360778
+      string: photo=spec/fixtures/test.jpg&device_timestamp=1508360778
     headers:
       User-Agent:
       - Instagram 4.2.1 Android (11/1.5.0; 320; 720x1280; samsung; SM-N9000; SM-N9000;
@@ -100,7 +100,7 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: '{"media_id": "1508360778", "status": "ok"}'
-    http_version: 
+    http_version:
   recorded_at: Wed, 18 Oct 2017 21:06:20 GMT
 - request:
     method: post
@@ -168,6 +168,6 @@ http_interactions:
         [], "comments": [], "comment_count": 1, "photo_of_you": false, "organic_tracking_token":
         "eyJ2ZXJzaW9uIjo1LCJwYXlsb2FkIjp7ImlzX2FuYWx5dGljc190cmFja2VkIjpmYWxzZSwidXVpZCI6IjI5MDFlMWIyMTRiZDQ1YjFhMmExNWRkYzcyMGExOGQ0MTYyODU3MDcyNzkwODM4MzQyNCIsInNlcnZlcl90b2tlbiI6IjE1MDgzNjA3ODIyNTN8MTYyODU3MDcyNzkwODM4MzQyNHw2MTMyMTYwMjY3fGVlMTliODU1ODUzNDZmN2NiMDI2ZWFkMTEwNDBkNmI1OWM2ZTg3YjVjOTEzNTdiZTM3ZmE2NTk5NjA0ZmY2MzUifSwic2lnbmF0dXJlIjoiIn0="},
         "status": "ok"}'
-    http_version: 
+    http_version:
   recorded_at: Wed, 18 Oct 2017 21:06:23 GMT
 recorded_with: VCR 3.0.3

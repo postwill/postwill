@@ -2,7 +2,7 @@ module SocialPosting
   module Providers
     class Instagram < Base
       def initialize(options)
-        @client ||= ::Instagram::Client.new(options[:username], options[:password])
+        @client ||= ::InstagramUpload::Client.new(options[:username], options[:password])
       end
 
       private
