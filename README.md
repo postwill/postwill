@@ -1,5 +1,9 @@
 # Postwill
 
+[![Gem Version](https://badge.fury.io/rb/postwill.svg)](https://badge.fury.io/rb/postwill)
+[![CircleCI](https://circleci.com/gh/postwill/postwill/tree/master.svg?style=svg)](https://circleci.com/gh/postwill/postwill/tree/master)
+[![Maintainability](https://api.codeclimate.com/v1/badges/16f924433bfc8b8ebd6b/maintainability)](https://codeclimate.com/github/postwill/postwill/maintainability)
+
 Posting to the most popular social media
 
 ## Installation
