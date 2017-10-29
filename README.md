@@ -1,4 +1,4 @@
-# SocialPosting
+# Postwill
 
 Posting to the most popular social media
 
@@ -7,7 +7,7 @@ Posting to the most popular social media
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'social_posting'
+gem 'postwill'
 ```
 
 And then execute:
@@ -16,23 +16,23 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install social_posting
+    $ gem install postwill
 
 ## Usage
 
-List of available providers is [here](https://github.com/postwill/social_posting/blob/master/PROVIDERS.md).
+List of available providers is [here](https://github.com/postwill/postwill/blob/master/PROVIDERS.md).
 
 ### Single provider
 
 ```ruby
-social_posting = SocialPosting::Client.new(
+postwill = Postwill::Client.new(
                    twitter: {
                      access_token: 'access_token',
                      access_token_secret: 'access_token_secret'
                    }
                  )
 
-social_posting.to(:twitter, text: 'text', image: 'image')
+postwill.to(:twitter, text: 'text', image: 'image')
 ```
 
 Success:
@@ -57,9 +57,9 @@ Failure:
 
 Application credentials
 
-`config/initializers/social_posting.rb`
+`config/initializers/postwill.rb`
 ```ruby
-SocialPosting::Settings.configure do |config|
+Postwill::Settings.configure do |config|
   config.providers.twitter = {
     consumer_key: 'your_consumer_key',
     consumer_secret: 'your_consumer_secret'
@@ -70,7 +70,7 @@ end
 ### Multiple providers
 
 ```ruby
-social_posting = SocialPosting::Client.new(
+postwill = Postwill::Client.new(
                    twitter: {
                      access_token: 'access_token',
                      access_token_secret: 'access_token_secret'
@@ -80,7 +80,7 @@ social_posting = SocialPosting::Client.new(
                    }
                  )
 
-social_posting.to(%i[twitter facebook], text: 'text', image: 'image')
+postwill.to(%i[twitter facebook], text: 'text', image: 'image')
 ```
 
 Result:
@@ -99,9 +99,9 @@ Result:
 
 Application credentials(for providers which need them)
 
-`config/initializers/social_posting.rb`
+`config/initializers/postwill.rb`
 ```ruby
-SocialPosting::Settings.configure do |config|
+Postwill::Settings.configure do |config|
   config.providers.twitter = {
     consumer_key: 'your_consumer_key',
     consumer_secret: 'your_consumer_secret'
@@ -111,7 +111,7 @@ end
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/postwill/social_posting.
+Bug reports and pull requests are welcome on GitHub at https://github.com/postwill/postwill.
 
 ## License
 

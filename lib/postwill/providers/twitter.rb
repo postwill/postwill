@@ -1,4 +1,4 @@
-module SocialPosting
+module Postwill
   module Providers
     class Twitter < Base
       def initialize(options)
@@ -13,7 +13,7 @@ module SocialPosting
       private
 
       def post(options)
-        image = options[:image]
+        image = File.open(options[:image]) if options[:image]
         text = options[:text]
 
         response = image ? client.update_with_media(text, image) : client.update(text)
@@ -21,7 +21,7 @@ module SocialPosting
       end
 
       def credentials
-        SocialPosting::Settings.config.providers.twitter
+        Postwill::Settings.config.providers.twitter
       end
     end
   end

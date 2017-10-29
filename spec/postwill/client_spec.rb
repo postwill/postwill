@@ -1,4 +1,4 @@
-describe SocialPosting::Client do
+describe Postwill::Client do
   let(:data) do
     {
       twitter: { access_token: FFaker::IdentificationMX.curp, access_token_secret: FFaker::IdentificationMX.curp },
@@ -6,14 +6,14 @@ describe SocialPosting::Client do
     }
   end
 
-  subject { SocialPosting::Client }
+  subject { Postwill::Client }
 
   describe '#to' do
     context 'single provider' do
       it 'should returns :ok' do
         VCR.use_cassette('twitter_valid') do
-          social_posting = subject.new(data)
-          response = social_posting.to(:twitter, text: 'text')
+          postwill = subject.new(data)
+          response = postwill.to(:twitter, text: 'text')
 
           expect(response[:twitter][:status]).to eq :ok
         end
@@ -21,8 +21,8 @@ describe SocialPosting::Client do
 
       it 'should returns :error' do
         VCR.use_cassette('twitter_invalid') do
-          social_posting = subject.new(data)
-          response = social_posting.to(:twitter, text: 'text')
+          postwill = subject.new(data)
+          response = postwill.to(:twitter, text: 'text')
 
           expect(response[:twitter][:status]).to eq :error
         end
@@ -33,8 +33,8 @@ describe SocialPosting::Client do
       it 'everything is fine' do
         VCR.use_cassette('twitter_valid') do
           VCR.use_cassette('facebook_valid') do
-            social_posting = subject.new(data)
-            response = social_posting.to(%i[twitter facebook], text: 'text')
+            postwill = subject.new(data)
+            response = postwill.to(%i[twitter facebook], text: 'text')
 
             expect(response[:twitter][:status]).to eq :ok
             expect(response[:facebook][:status]).to eq :ok
@@ -45,8 +45,8 @@ describe SocialPosting::Client do
       it 'one of providers is failed' do
         VCR.use_cassette('twitter_valid') do
           VCR.use_cassette('facebook_invalid') do
-            social_posting = subject.new(data)
-            response = social_posting.to(%i[twitter facebook], text: 'text')
+            postwill = subject.new(data)
+            response = postwill.to(%i[twitter facebook], text: 'text')
 
             expect(response[:twitter][:status]).to eq :ok
             expect(response[:facebook][:status]).to eq :error
@@ -62,8 +62,8 @@ describe SocialPosting::Client do
     it 'should assign instance variable for each provider' do
       client.send(:instance_providers, data)
 
-      expect(client.instance_variable_get(:@twitter)).to be_a_kind_of(SocialPosting::Providers::Twitter)
-      expect(client.instance_variable_get(:@facebook)).to be_a_kind_of(SocialPosting::Providers::Facebook)
+      expect(client.instance_variable_get(:@twitter)).to be_a_kind_of(Postwill::Providers::Twitter)
+      expect(client.instance_variable_get(:@facebook)).to be_a_kind_of(Postwill::Providers::Facebook)
     end
   end
 end

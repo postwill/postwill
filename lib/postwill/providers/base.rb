@@ -1,4 +1,4 @@
-module SocialPosting
+module Postwill
   module Providers
     class Base
       attr_reader :client

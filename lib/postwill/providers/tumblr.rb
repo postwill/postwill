@@ -1,4 +1,4 @@
-module SocialPosting
+module Postwill
   module Providers
     class Tumblr < Base
       def initialize(options)
@@ -28,7 +28,7 @@ module SocialPosting
       end
 
       def credentials
-        SocialPosting::Settings.config.providers.tumblr
+        Postwill::Settings.config.providers.tumblr
       end
 
       def response(result)

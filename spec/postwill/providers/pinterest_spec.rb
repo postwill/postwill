@@ -1,5 +1,5 @@
-describe SocialPosting::Providers::Facebook do
-  subject { SocialPosting::Providers::Pinterest.new(access_token: FFaker::IdentificationMX.curp) }
+describe Postwill::Providers::Facebook do
+  subject { Postwill::Providers::Pinterest.new(access_token: FFaker::IdentificationMX.curp) }
   let(:image_url) { FFaker::Avatar.image }
   let(:board_id) { FFaker::IdentificationMX.curp }
 

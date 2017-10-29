@@ -1,6 +1,6 @@
-describe SocialPosting::Providers::Instagram do
+describe Postwill::Providers::Instagram do
   subject do
-    SocialPosting::Providers::Instagram.new(username: FFaker::IdentificationMX.curp, password: FFaker::IdentificationMX.curp)
+    Postwill::Providers::Instagram.new(username: FFaker::IdentificationMX.curp, password: FFaker::IdentificationMX.curp)
   end
 
   let(:text) { 'test api explorer' }

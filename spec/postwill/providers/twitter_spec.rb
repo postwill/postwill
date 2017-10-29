@@ -1,12 +1,12 @@
-describe SocialPosting::Providers::Twitter do
+describe Postwill::Providers::Twitter do
   subject do
-    SocialPosting::Providers::Twitter.new(access_token: FFaker::IdentificationMX.curp,
+    Postwill::Providers::Twitter.new(access_token: FFaker::IdentificationMX.curp,
                                           access_token_secret: FFaker::IdentificationMX.curp)
   end
 
   describe '#call' do
     before do
-      allow(SocialPosting::Settings).to receive_message_chain(:config, :providers, :twitter)
+      allow(Postwill::Settings).to receive_message_chain(:config, :providers, :twitter)
       .and_return({ consumer_key: FFaker::IdentificationMX.curp, consumer_secret: FFaker::IdentificationMX.curp })
     end
 

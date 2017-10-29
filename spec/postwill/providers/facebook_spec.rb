@@ -1,5 +1,5 @@
-describe SocialPosting::Providers::Facebook do
-  subject { SocialPosting::Providers::Facebook.new(access_token: FFaker::IdentificationMX.curp) }
+describe Postwill::Providers::Facebook do
+  subject { Postwill::Providers::Facebook.new(access_token: FFaker::IdentificationMX.curp) }
 
   describe '#call' do
     context 'if everything is ok' do

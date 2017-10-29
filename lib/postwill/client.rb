@@ -1,4 +1,4 @@
-module SocialPosting
+module Postwill
   class Client
     PROVIDERS = %i[twitter facebook pinterest tumblr instagram]
 
@@ -28,7 +28,7 @@ module SocialPosting
       PROVIDERS.each do |provider|
         next unless data[provider]
 
-        instance_variable_set("@#{provider}", Object.const_get(['SocialPosting::Providers::',
+        instance_variable_set("@#{provider}", Object.const_get(['Postwill::Providers::',
                                                                 provider.to_s.capitalize].join)
                                                                 .new(data[provider]))
       end

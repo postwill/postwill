@@ -1,4 +1,4 @@
-describe SocialPosting::Providers::Base do
+describe Postwill::Providers::Base do
   describe '#call' do
     it 'should returns left monad' do
       response = subject.call
