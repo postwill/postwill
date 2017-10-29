@@ -125,7 +125,7 @@ Failure:
 
 # Tumblr
 
-Based on: [TumblrClient](https://github.com/tumblr/tumblr_client)
+Based on: [TumblrClient](https://github.com/postwill/tumblr_client)
 
 ```ruby
 SocialPosting::Settings.configure do |config|
@@ -167,6 +167,39 @@ Failure:
 ```ruby
 {
   tumblr: {
+    status: :error,
+    response: '' # String error message
+  }
+}
+```
+
+# Instagram
+
+```ruby
+social_posting = SocialPosting::Client.new(
+                   instagram: {
+                     username: 'username',
+                     password: 'password'
+                   }
+                 )
+
+social_posting.to(:instagram, text: 'text', image: 'image')
+```
+
+Success:
+```ruby
+{
+  instagram: {
+    status: :ok,
+    response: {} # Response data
+  }
+}
+```
+
+Failure:
+```ruby
+{
+  instagram: {
     status: :error,
     response: '' # String error message
   }
