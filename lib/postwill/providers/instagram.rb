@@ -1,4 +1,4 @@
-module SocialPosting
+module Postwill
   module Providers
     class Instagram < Base
       def initialize(options)

@@ -1,5 +1,5 @@
 require 'bundler/setup'
-require 'social_posting'
+require 'postwill'
 require 'vcr'
 require 'webmock/rspec'
 require 'ffaker'

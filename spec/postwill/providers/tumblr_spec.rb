@@ -1,6 +1,6 @@
-describe SocialPosting::Providers::Tumblr do
+describe Postwill::Providers::Tumblr do
   subject do
-    SocialPosting::Providers::Tumblr.new(access_token: FFaker::IdentificationMX.curp,
+    Postwill::Providers::Tumblr.new(access_token: FFaker::IdentificationMX.curp,
                                          access_token_secret: FFaker::IdentificationMX.curp)
   end
 

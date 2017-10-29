@@ -1,15 +1,15 @@
 $LOAD_PATH.push File.expand_path('../lib', __FILE__)
-require 'social_posting/version'
+require 'postwill/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'social_posting'
-  spec.version       = SocialPosting::VERSION
+  spec.name          = 'postwill'
+  spec.version       = Postwill::VERSION
   spec.authors       = ['Kirill Shevchenko']
   spec.email         = ['hello@kirillshevch.com']
 
   spec.summary       = 'Posting to the most popular social media'
   spec.description   = spec.summary
-  spec.homepage      = 'https://github.com/postwill/social_posting'
+  spec.homepage      = 'https://github.com/postwill/postwill'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
@@ -24,6 +24,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'twitter', '~> 6.1.0'
   spec.add_dependency 'koala', '~> 3.0.0'
   spec.add_dependency 'pinterest-api', '~> 0.4.0'
+  spec.add_dependency 'instagram_upload', '~> 0.1.2'
 
   spec.add_development_dependency 'bundler', '~> 1.15'
   spec.add_development_dependency 'rake', '~> 10.0'

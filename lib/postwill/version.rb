@@ -1,3 +1,3 @@
-module SocialPosting
+module Postwill
   VERSION = '0.1.0'
 end

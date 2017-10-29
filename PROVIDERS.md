@@ -3,14 +3,14 @@
 Based on: [Twitter](https://github.com/sferik/twitter)
 
 ```ruby
-social_posting = SocialPosting::Client.new(
+postwill = Postwill::Client.new(
                    twitter: {
                      access_token: 'access_token',
                      access_token_secret: 'access_token_secret'
                    }
                  )
 
-social_posting.to(:twitter, text: 'text', image: 'image')
+postwill.to(:twitter, text: 'text', image: 'image')
 ```
 
 Success:
@@ -35,7 +35,7 @@ Failure:
 
 Settings:
 ```ruby
-SocialPosting::Settings.configure do |config|
+Postwill::Settings.configure do |config|
   config.providers.twitter = {
     consumer_key: 'your_consumer_key',
     consumer_secret: 'your_consumer_secret'
@@ -48,13 +48,13 @@ end
 Based on: [Koala](https://github.com/arsduo/koala)
 
 ```ruby
-social_posting = SocialPosting::Client.new(
+postwill = Postwill::Client.new(
                    facebook: {
                      access_token: 'access_token'
                    }
                  )
 
-social_posting.to(:facebook, text: 'text', image: 'image')
+postwill.to(:facebook, text: 'text', image: 'image')
 ```
 
 Success:
@@ -82,7 +82,7 @@ Failure:
 Based on: [PinterestApi](https://github.com/realadeel/pinterest-api)
 
 ```ruby
-social_posting = SocialPosting::Client.new(
+postwill = Postwill::Client.new(
                    pinterest: {
                      access_token: 'access_token'
                    }
@@ -91,9 +91,9 @@ social_posting = SocialPosting::Client.new(
 # Reqired: [board_id image image_url]
 # Optional: [text link]
 
-social_posting.to(:pinterest, text: 'text', image: 'image', board_id: 'board_id', link: 'link')
+postwill.to(:pinterest, text: 'text', image: 'image', board_id: 'board_id', link: 'link')
 # OR
-social_posting.to(:pinterest, text: 'text', image_url: 'image_url', board_id: 'board_id', link: 'link')
+postwill.to(:pinterest, text: 'text', image_url: 'image_url', board_id: 'board_id', link: 'link')
 ```
 
 Success:
@@ -128,14 +128,14 @@ Failure:
 Based on: [TumblrClient](https://github.com/postwill/tumblr_client)
 
 ```ruby
-SocialPosting::Settings.configure do |config|
+Postwill::Settings.configure do |config|
   config.providers.tumblr = {
     consumer_key: 'consumer_key',
     consumer_secret: 'consumer_secret'
   }
 end
 
-social_posting = SocialPosting::Client.new(
+postwill = Postwill::Client.new(
                    tumblr: {
                      access_token: 'access_token',
                      access_token_secret: 'access_token_secret'
@@ -144,9 +144,9 @@ social_posting = SocialPosting::Client.new(
 
 # Reqired: [user_nickname text image title]
 
-social_posting.to(:tumblr, text: 'text', image: 'image', user: 'user_nickname')
+postwill.to(:tumblr, text: 'text', image: 'image', user: 'user_nickname')
 # or
-social_posting.to(:tumblr, text: 'text', title: 'title', user: 'user_nickname')
+postwill.to(:tumblr, text: 'text', title: 'title', user: 'user_nickname')
 ```
 
 Success:
@@ -175,15 +175,17 @@ Failure:
 
 # Instagram
 
+Based on: [InstagramUpload](https://github.com/postwill/instagram_upload)
+
 ```ruby
-social_posting = SocialPosting::Client.new(
+postwill = Postwill::Client.new(
                    instagram: {
                      username: 'username',
                      password: 'password'
                    }
                  )
 
-social_posting.to(:instagram, text: 'text', image: 'image')
+postwill.to(:instagram, text: 'text', image: 'image')
 ```
 
 Success:

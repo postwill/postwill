@@ -1,4 +1,4 @@
-module SocialPosting
+module Postwill
   class Response
     def self.call(type, value)
       {

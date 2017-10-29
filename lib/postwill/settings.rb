@@ -1,4 +1,4 @@
-module SocialPosting
+module Postwill
   class Settings
     extend ::Dry::Configurable
 
