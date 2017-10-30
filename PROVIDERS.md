@@ -128,13 +128,6 @@ Failure:
 Based on: [TumblrClient](https://github.com/postwill/tumblr_client)
 
 ```ruby
-Postwill::Settings.configure do |config|
-  config.providers.tumblr = {
-    consumer_key: 'consumer_key',
-    consumer_secret: 'consumer_secret'
-  }
-end
-
 postwill = Postwill::Client.new(
                    tumblr: {
                      access_token: 'access_token',
@@ -171,6 +164,16 @@ Failure:
     response: '' # String error message
   }
 }
+```
+
+Settings:
+```ruby
+Postwill::Settings.configure do |config|
+  config.providers.tumblr = {
+    consumer_key: 'consumer_key',
+    consumer_secret: 'consumer_secret'
+  }
+end
 ```
 
 # Instagram
