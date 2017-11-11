@@ -4,8 +4,8 @@ require 'postwill/version'
 Gem::Specification.new do |spec|
   spec.name          = 'postwill'
   spec.version       = Postwill::VERSION
-  spec.authors       = ['Kirill Shevchenko']
-  spec.email         = ['hello@kirillshevch.com']
+  spec.authors       = ['Kirill Shevchenko', 'Bezrukavyi Yaroslav']
+  spec.email         = ['hello@kirillshevch.com', 'yaroslav.bezrukavyi@gmail.com']
 
   spec.summary       = 'Posting to the most popular social media'
   spec.description   = spec.summary
